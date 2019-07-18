@@ -48,6 +48,10 @@ public class GraphQLProvider {
                         .dataFetcher("userById", graphQLDataFetchers.getUserByIdDataFetcher()))
                 .type(newTypeWiring("User")
                         .dataFetcher("address", graphQLDataFetchers.getUserDataFetcher()))
+                //by siddhu for mutation start[
+                .type(newTypeWiring("Mutation")
+                        .dataFetcher("createUser", graphQLDataFetchers.createUserDataFetcher()))
+                //by siddhu for mutation end]
                 .build();
     }
 

@@ -14,3 +14,7 @@ type Address {
     houseName: String
     country: String
 }
+
+type Mutation {
+createUser(name: String!, age: Int!): User
+}
