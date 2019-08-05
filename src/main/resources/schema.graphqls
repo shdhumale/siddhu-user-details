@@ -1,3 +1,9 @@
+schema {
+    query: Query
+    subscription: Subscription
+    mutation: Mutation
+}
+
 type Query {
     userById(id: ID): User
 }
@@ -18,3 +24,14 @@ type Address {
 type Mutation {
 createUser(name: String!, age: Int!): User
 }
+
+type Subscription {
+newUser: User!
+#stockQuotes(stockCodes:[String]): StockPriceUpdate!
+}
+#type StockPriceUpdate {
+#    dateTime : String
+#    stockCode : String
+#    stockPrice : Float
+#   stockPriceChange : Float
+#}
