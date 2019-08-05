@@ -23,7 +23,9 @@ public class UserPublisher {
     private static final Logger LOG = LoggerFactory.getLogger(UserPublisher.class);
     
     public final Flowable<User> publisher;
-    public User objUser = new User("test1","testnmame",1);
+    static int i = 0;
+   // public User objUser = new User("test1","testnmame",1);
+    
 
    //public static ObservableList<User> observableList = new ObservableList<>();
     
@@ -33,7 +35,7 @@ public class UserPublisher {
     public static UserPublisher getInstance(){
         return instance;
     }    
-*/    
+    
     
     public void setUser(User user)
     {
@@ -44,7 +46,7 @@ public class UserPublisher {
     {
     	return this.objUser;
     }
-    
+ */   
    public UserPublisher(){
     	
     	Observable<User> stockPriceUpdateObservable = Observable.create(emitter -> {
@@ -96,7 +98,8 @@ public class UserPublisher {
    	System.out.println("Inside newStockTick");
        return () -> {
        	List<User> userUpdate = new ArrayList<>();
-       	User objUser = new User("Sid hard code", "sid dhu", 5);
+       	i = i + 1;
+       	User objUser = new User("Sid hard code ["+i+"]", "sid dhu", 5);
        	userUpdate.add(objUser);   
        	System.out.println("Inside newStockTick emitStocks");
            emitStocks(emitter, userUpdate);

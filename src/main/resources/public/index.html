@@ -164,25 +164,24 @@
         </div>
         <div class="col-sm-3">
             <h3>Explanation</h3>
-            <p>This demonstrates the use of graphql subscriptions and web sockets to send a stream of imagined stock price
+            <p>This demonstrates the use of graphql subscriptions and web sockets to send a stream of User value.
                 updates to this page.</p>
             <p>The updates are continuously sent from a server side publish and subscribe system (RxJava in this case) and
                 pushed
                 down to the browser client while applying graphql shapes to the subscription data</p>
             <p>The graphql query used in this example is :</p>
             <pre>
-subscription StockCodeSubscription {
-    stockQuotes {
-        dateTime
-        stockCode
-        stockPrice
-        stockPriceChange
-    }
-}
+subscription userSubscription { 
+                   newUser {
+                    id
+                    name
+                    age
+                    }
+               }
             </pre>
         </div>
         <div class="col-sm-8">
-            <h3>Stock Price Updates</h3>
+            <h3>Sid Value update Updates</h3>
             <div class="stockTicker">Pending subscription...</div>
             <div class="networking">📡</div>
         </div>

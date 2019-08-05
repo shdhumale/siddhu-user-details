@@ -73,8 +73,8 @@ public class GraphQLProvider {
               /* .type(newTypeWiring("Subscription")
                         .dataFetcher("stockQuotes", graphQLDataFetchers.stockQuotesDataFetcher()))*/
                 
-              .type(newTypeWiring("Subscription")
-                        .dataFetcher("newUser", graphQLDataFetchers.newUserDataFetcher()))
+             /* .type(newTypeWiring("Subscription")
+                        .dataFetcher("newUser", graphQLDataFetchers.newUserDataFetcher()))*/
                 //by siddhu for subscription end]
                 .build();
     }

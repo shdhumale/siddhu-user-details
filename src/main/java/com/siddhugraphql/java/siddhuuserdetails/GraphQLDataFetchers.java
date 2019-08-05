@@ -209,7 +209,7 @@ public class GraphQLDataFetchers {
 		};
 	}    
 */
-	public DataFetcher newUserDataFetcher() {
+	/*public DataFetcher newUserDataFetcher() {
 		return dataFetchingEnvironment -> {
 			//String userId = dataFetchingEnvironment.getArgument("id");			
 			System.out.println("here reached userId newUserDataFetcher ............");
@@ -218,7 +218,7 @@ public class GraphQLDataFetchers {
 			return objSiddhuGraphqlPublisher.stockQuotesSubscriptionFetcher();
 			
 		};
-	}
+	}*/
 
 
 	//by siddhu for Subscription end]
