@@ -26,9 +26,9 @@ public class GraphQLDataFetchers {
 	/*@Autowired
 	com.siddhugraphql.java.siddhuuserdetails.resolvers.Subscription  objSubscription;
 */
-	@Autowired
+	/*@Autowired
 	com.siddhugraphql.java.siddhuuserdetails.resolvers.UserSubscription objUserSubscription;
-
+*/
 	private List<Map<String, String>> getUserList()
 	{
 		Map<String, String> objMap1 = new HashMap();

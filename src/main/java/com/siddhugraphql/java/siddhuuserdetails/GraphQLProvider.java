@@ -37,9 +37,9 @@ public class GraphQLProvider {
     @Autowired
     GraphQLDataFetchers graphQLDataFetchers;
     
-    @Autowired
+  /*  @Autowired
 	com.siddhugraphql.java.siddhuuserdetails.resolvers.UserSubscription objUserSubscription;
-
+*/
     private GraphQL graphQL;
     
     
