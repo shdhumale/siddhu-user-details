@@ -66,7 +66,7 @@ public class UserPublisher {
 
 
 
-	public void emitEvent(User objUser)
+	/*public void emitEvent(User objUser)
 	{
 		Observable<User> stockPriceUpdateObservable = Observable.create(emitter -> {
 
@@ -124,7 +124,7 @@ public class UserPublisher {
 				LOG.error("Cannot send StockUpdate", e);
 			}
 		}
-	}
+	}*/
 
 	public Flowable<User> getPublisher() {
 		return publisher;
