@@ -73,90 +73,12 @@ public class GraphQLProvider {
               /* .type(newTypeWiring("Subscription")
                         .dataFetcher("stockQuotes", graphQLDataFetchers.stockQuotesDataFetcher()))*/
                 
-             /* .type(newTypeWiring("Subscription")
+           /*   .type(newTypeWiring("Subscription")
                         .dataFetcher("newUser", graphQLDataFetchers.newUserDataFetcher()))*/
                 //by siddhu for subscription end]
                 .build();
-    }
-    
-/*    public DataFetcher userDataFetcher() {
+    }    
 
-		return dataFetchingEnvironment -> {
-			//String userId = dataFetchingEnvironment.getArgument("id");			
-			System.out.println("here reached userId newUserDataFetcher ............");
-			String query =
-	                "    subscription {\n" +
-	                "        newUser {\n" +
-	                "            id\n" +
-	                "            name\n" +
-	                "            age\n" +
-	                "        }\n" +
-	                "    }\n";
-	        User executionResult = (User)this.graphQL.execute(query);
-	        ExecutionResult executionResult1 = this.graphQL.execute(query);
-
-	        String id = executionResult.getId();
-	        System.out.println("-------------id -------------------"+id);
-	        String name = executionResult.getName();
-	        System.out.println("-------------name -------------------"+name);
-	        String age = ""+executionResult.getAge();
-	        System.out.println("-------------age -------------------"+age);
-	        Publisher<User> userStream = executionResult1.getData();
-
-	        AtomicReference<Subscription> subscriptionRef = new AtomicReference<>();
-	        userStream.subscribe(new Subscriber<User>() {
-
-	            @Override
-	            public void onSubscribe(Subscription s) {
-	                subscriptionRef.set(s);
-	                s.request(1);
-	            }
-
-	            @Override
-	            public void onNext(User er) {
-	                //
-	                // process the next stock price
-	                //
-	                //processStockPriceChange(er.getData());
-
-	                //
-	                // ask the publisher for one more item please
-	                //
-	                subscriptionRef.get().request(1);
-	            }
-
-	            @Override
-	            public void onError(Throwable t) {
-	                //
-	                // The upstream publishing data source has encountered an error
-	                // and the subscription is now terminated.  Real production code needs
-	                // to decide on a error handling strategy.
-	                //
-	            }
-
-	            @Override
-	            public void onComplete() {
-	                //
-	                // the subscription has completed.  There is not more data
-	                //
-	            }
-	        });
-			return objUserSubscription.newUser();
-			
-		};		
-
-	}*/
-    
-	/*static void dataFetcherExample() {
-        DataFetcher<Publisher<User>> publisherDataFetcher = new DataFetcher<Publisher<User>>() {
-            @Override
-            public Publisher<User> get(DataFetchingEnvironment environment) {
-                //return buildPublisherForStockCode();
-            	return objUserSubscription.newUser();
-            }
-        };
-    }
-*/
     @Bean
     public GraphQL graphQL() {
         return graphQL;
